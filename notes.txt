@@ -1,0 +1,7 @@
+Подробный рассказ как создать и настроить джанго-проект в VS Code и работать с ним 
+в вс-коде - https://code.visualstudio.com/docs/python/tutorial-django. 
+
+------------------
+
+
+
