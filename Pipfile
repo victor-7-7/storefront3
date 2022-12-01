@@ -5,8 +5,31 @@ name = "pypi"
 
 [packages]
 django = "*"
+pylint-django = "*"
+django-debug-toolbar = "*"
+mysqlclient = "*"
+djangorestframework = "*"
+django-filter = "*"
+drf-nested-routers = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
+pillow = "*"
+django-cors-headers = "*"
+django-templated-mail = "*"
+redis = "*"
+celery = "*"
+flower = "*"
+django-redis = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
+model-bakery = "*"
+pytest-watch = "*"
+locust = "*"
+django-silk = "*"
 
 [requires]
 python_version = "3.10"
