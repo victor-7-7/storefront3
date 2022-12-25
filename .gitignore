@@ -190,3 +190,4 @@ fabric.properties
 /static/
 /media/
 /storefront/settings/dev.py
+/.idea/workspace.xml
