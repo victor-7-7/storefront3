@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="deploy_store3" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="deploy_store3">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/domains/vvidom.ru" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/storefront/settings/dev.py" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

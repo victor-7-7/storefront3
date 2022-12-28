@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1a1a1b68-6a1d-4423-9262-e80e60127b79" name="deploy_store3" url="http://vvidom.ru">
+        <fileTransfer rootFolder="/home/users/j/j58916133" accessType="SFTP" host="j58916133.myjino.ru" port="22" sshConfigId="7a47871e-a1ac-4957-ac27-3ba29e4d899d" sshConfig="j58916133@j58916133.myjino.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
