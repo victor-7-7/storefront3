@@ -151,7 +151,8 @@ SIMPLE_JWT = {
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "localhost"
+# EMAIL_HOST = "localhost"
+EMAIL_HOST = "smtp4dev"  # docker
 EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
 EMAIL_PORT = 2525
@@ -162,7 +163,9 @@ ADMINS = [
     ('Vic', 'admin@victor.com')
 ]
 
-CELERY_BROKER_URL = 'redis://localhost:6379/1'
+# CELERY_BROKER_URL = 'redis://localhost:6379/1'
+CELERY_BROKER_URL = 'redis://redis:6379/1'  # docker
+
 CELERY_BEAT_SCHEDULE = {
     'notify_customers': {
         'task': 'playground.tasks.notify_customers',
@@ -181,7 +184,8 @@ CACHES = {
         "BACKEND": "django_redis.cache.RedisCache",
         # Редисная база №1 уже используется для CELERY_BROKER_URL,
         # потому для кэша назначаем редисную ДБ №2
-        "LOCATION": "redis://127.0.0.1:6379/2",
+        # "LOCATION": "redis://127.0.0.1:6379/2",
+        "LOCATION": "redis://redis:6379/2",  # docker
         "TIMEOUT": 10 * 60,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
