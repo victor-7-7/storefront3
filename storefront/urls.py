@@ -32,7 +32,3 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
 
 ]
-
-if dev.DEBUG:
-    urlpatterns += static(common.MEDIA_URL, document_root=common.MEDIA_ROOT)
-    urlpatterns += [path('silk/', include('silk.urls', namespace='silk'))]

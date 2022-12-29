@@ -7,9 +7,9 @@ import sys
 def main():
     """Run administrative tasks."""
     # For development (debug mode)
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "storefront.settings.dev")
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "storefront.settings.dev")
     # For production
-    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "storefront.settings.prod")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "storefront.settings.prod")
 
     try:
         from django.core.management import execute_from_command_line
