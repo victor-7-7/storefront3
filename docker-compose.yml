@@ -11,6 +11,7 @@ services:
     restart: on-failure
     volumes:
       - .:/app
+
   mysql:
     image: mysql:8.0
     ports:
@@ -21,6 +22,7 @@ services:
       - MYSQL_ROOT_PASSWORD=MS-192837465-sm
     volumes:
       - mysqldata:/var/lib/mysql     
+
   redis:
     image: redis:6.2-alpine
     ports:
@@ -28,12 +30,14 @@ services:
     restart: always
     volumes:
       - redisdata:/data
+
   smtp4dev:
     image: rnwood/smtp4dev:v3
     ports:
       - "5000:80"
       - "25:25"
     restart: always
+
   celery:
     build: .
     command: celery -A storefront worker --loglevel=info
@@ -41,13 +45,15 @@ services:
       - redis
     volumes:
       - .:/app
-  celery-beat:
-    build: .
-    command: celery -A storefront beat --loglevel=info
-    depends_on:
-      - redis
-    volumes:
-      - .:/app
+
+#  celery-beat:
+#    build: .
+#    command: celery -A storefront beat --loglevel=info
+#    depends_on:
+#      - redis
+#    volumes:
+#      - .:/app
+
   flower:
     build: .
     command: celery -A storefront flower
@@ -61,15 +67,17 @@ services:
       - CELERY_BACKEND=redis://redis:6379/0
     ports:
       - "5555:5555"
-  tests:
-    build: .
-    command: ./wait-for-it.sh mysql:3306 -- ptw
-    depends_on:
-      - redis
-      - mysql
-    tty: true
-    volumes:
-      - .:/app
+
+#  tests:
+#    build: .
+#    command: ./wait-for-it.sh mysql:3306 -- ptw
+#    depends_on:
+#      - redis
+#      - mysql
+#    tty: true
+#    volumes:
+#      - .:/app
+
 volumes:
   mysqldata:
   pgdata:
